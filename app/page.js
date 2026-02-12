@@ -13,7 +13,7 @@ export default function LoginPage() {
     e.preventDefault();
     setStatus("Testing connection...");
     try {
-      // This will attempt to talk to your Cloud Project
+      // This will attempt to talk to the Cloud Project
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       setStatus(`Success! Logged in as: ${userCredential.user.email}`);
     } catch (error) {
