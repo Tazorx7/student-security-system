@@ -23,7 +23,7 @@ ROUTE GUARDING
 component found in `app/components/` .
 -usage:
 ```javascript
-import protectedRoute from "../components/ProtectedRoute";
+import ProtectedRoute from "../components/protectedRoute";
 export default function MyPage(){
 return<ProtectedRoute>{/*UI Code */}</ProtectedRoute>;
 }````
