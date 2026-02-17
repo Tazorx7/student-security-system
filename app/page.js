@@ -1,46 +1,21 @@
-"use client";
+import { Navbar } from './components/common/Navbar';
+import { Footer } from './components/common/Footer';
+import { Hero } from './components/landing/Hero';
+import { Features } from './components/landing/Features';
+import { Security } from './components/landing/Security';
+import { CTA } from './components/landing/CTA';
 
-import { useState } from "react";
-import { auth } from "../lib/firebase"; 
-import { signInWithEmailAndPassword } from "firebase/auth";
-
-export default function LoginPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [status, setStatus] = useState("Waiting for login...");
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    setStatus("Testing connection...");
-    try {
-      // This will attempt to talk to the Cloud Project
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      setStatus(`Success! Logged in as: ${userCredential.user.email}`);
-    } catch (error) {
-      // This will tell us if the API keys or Firewall are still blocked
-      setStatus(`Connection Error: ${error.message}`);
-    }
-  };
-
+export default function LandingPage() {
   return (
-    <div style={{ padding: '40px', fontFamily: 'sans-serif' }}>
-      <h1>School Security Login Test</h1>
-      <p>Status: <strong>{status}</strong></p>
-      <form onSubmit={handleLogin}>
-        <input 
-          type="email" 
-          placeholder="Staff Email" 
-          onChange={(e) => setEmail(e.target.value)} 
-          style={{ display: 'block', marginBottom: '10px' }}
-        />
-        <input 
-          type="password" 
-          placeholder="Password" 
-          onChange={(e) => setPassword(e.target.value)} 
-          style={{ display: 'block', marginBottom: '10px' }}
-        />
-        <button type="submit">Test Firebase Connection</button>
-      </form>
+    <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased transition-colors duration-300">
+      <Navbar />
+      <main className="flex-grow">
+        <Hero />
+        <Features />
+        <Security />
+        <CTA />
+      </main>
+      <Footer />
     </div>
   );
 }
