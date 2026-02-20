@@ -206,3 +206,6 @@ marimo/_lsp/
 __marimo__/
 node_modules
 .env.local
+.next/
+out/
+build/
