@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///home/kali/student-security-system/app/layout.js"],"sourcesContent":["export const metadata={\n  title: 'School Security System',\n  description: 'Testing',\n}\n\nexport default function\nRootLayout({children}){\n  return (\n    <html lang=\"en\">\n      <body>{children}</body>\n    </html>\n  )\n}\n"],"names":[],"mappings":";;;;;;;;AAAO,MAAM,WAAS;IACpB,OAAO;IACP,aAAa;AACf;AAEe,SACf,WAAW,EAAC,QAAQ,EAAC;IACnB,qBACE,8OAAC;QAAK,MAAK;kBACT,cAAA,8OAAC;sBAAM;;;;;;;;;;;AAGb"}},
+    {"offset": {"line": 36, "column": 0}, "map": {"version":3,"sources":["file:///home/kali/student-security-system/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = (\n  require('../../module.compiled') as typeof import('../../module.compiled')\n).vendored['react-rsc']!.ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":"AAAAA,OAAOC,OAAO,GACZC,QAAQ,4HACRC,QAAQ,CAAC,YAAY,CAAEC,kBAAkB","ignoreList":[0]}}]
+}
